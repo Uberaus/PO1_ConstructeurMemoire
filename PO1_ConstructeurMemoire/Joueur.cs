@@ -11,6 +11,18 @@ namespace PO1_ConstructeurMemoire
         private string nom;
         private Equipe equipe;
 
-        
+        public Joueur(string nom, Equipe equipe)
+        {
+            this.nom = nom;
+            this.equipe = equipe;
+        }
+
+        public string Nom { get => nom; set => nom = value; }
+        public Equipe Equipe { get => equipe; set => equipe = value; }
+
+        public override string? ToString()
+        {
+            return Nom + " des " + Equipe.Nom;
+        }
     }
 }
